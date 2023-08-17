@@ -20,17 +20,18 @@ We have three weights in first stage and one weight in second stage.<br>
 # Use a weight:
 python test_TL.py --data data/TL_3cls.yaml --weights (your_weights_path)/FristStage_model1_3cls.pt --img-size 1280 --batch-size 8 --task test  --name (dir_name)
 
-# Use three weights(ensemble learning):<br>
-python test_TL.py --data data/TL_3cls.yaml --weights (your_weights_path)/FristStage_model1_3cls.pt (your_weights_path)/FristStage_model2_3cls.pt (your_weights_path)/FristStage_model3_3cls.pt --img-size 1280 --batch-size 8 --task test --no-trace --name (dir_name)<br>
+# Use three weights(ensemble learning):
+python test_TL.py --data data/TL_3cls.yaml --weights (your_weights_path)/FristStage_model1_3cls.pt (your_weights_path)/FristStage_model2_3cls.pt (your_weights_path)/FristStage_model3_3cls.pt --img-size 1280 --batch-size 8 --task test --no-trace --name (dir_name)
 
 ## Second Stage
 # You need to crop the TL from First Stage result and label it as 7 cls.
-python test_TL.py --data data/TL_7cls.yaml --weights (your_weights_path)/SecondStage_7cls.pt --img-size 640 --batch-size 8 --task test  --name (dir_name)<br>
+python test_TL.py --data data/TL_7cls.yaml --weights (your_weights_path)/SecondStage_7cls.pt --img-size 640 --batch-size 8 --task test  --name (dir_name)
 ```
 ## Inference 
 ```python
-python detect_twonet.py --site-weights (your_weights_path)/FristStage_model1_3cls.pt (your_weights_path)/FristStage_model2_3cls.pt (your_weights_path)/FristStage_model3_3cls.pt --state-weights (your_weights_path)/SecondStage_7cls.pt --source (your_test_img_path)/images --img-size 1280 --name (dir_name) --no-trace
+python detect_twonet.py --site-weights (your_weights_path)/FristStage_model1_3cls.pt (your_weights_path)/FristStage_model2_3cls.pt (your_weights_path)/FristStage_model3_3cls.pt --state-weights (your_weights_path)/SecondStage_7cls.pt --source (your_test_img_path)/images --no-trace --img-size 1280 --name (dir_name) 
 ```
+![Result](Inference/Result.jpg "Result")
 ## Training
 
 
