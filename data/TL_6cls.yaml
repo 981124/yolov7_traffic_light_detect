@@ -1,0 +1,10 @@
+
+train: /home/rvl/Desktop/TrafficLight/newday/train_val_txt/train.txt
+val: /home/rvl/Desktop/TrafficLight/newday/train_val_txt/val.txt
+
+test: /home/rvl/Desktop/TrafficLight/newday/test/video_002/test.txt
+
+nc: 6
+
+# Classes
+names: ['Red','Yellow','Green','Left','Straight','Right']

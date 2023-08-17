@@ -1,0 +1,10 @@
+
+train: /home/rvl/Desktop/VGG16-PyTorch/dataset/resize/train.txt  
+val: /home/rvl/Desktop/VGG16-PyTorch/dataset/resize/val.txt 
+
+test: /home/rvl/Desktop/VGG16-PyTorch/dataset/resize/test.txt   
+
+nc: 7
+
+# class names
+names: [ 'Red', 'Yellow', 'Green', 'Left', 'Straight', 'Right', 'FalsePositive']
